@@ -26,7 +26,7 @@ def mergeSort(n,array):
             j += 1
             k += 1
 
-infile = open("C:/Users/Kaiya/Desktop/rosalind_ms.txt","rU")
+infile = open("C:/Users/Kaiya/Desktop/rosalind_inv.txt","rU")
 
 n = infile.readline()
 array = infile.readline()
@@ -41,7 +41,7 @@ mergeSort(n,array)
 
 #print array
 
-outfile = open("C:/Users/Kaiya/Desktop/rosalind_ms_ans.txt","w")
+outfile = open("C:/Users/Kaiya/Desktop/rosalind_inv_ans.txt","w")
 
 for i in array:
     print >>outfile, i,

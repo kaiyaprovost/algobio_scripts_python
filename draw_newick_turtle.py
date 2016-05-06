@@ -54,8 +54,6 @@ for i in phylo:
     if i == ",":
         ## stay same color
         ## check for polytomy
-        if phylo[icount-2] == ",":
-            print "polytomy"
         raph.left(180)
         raph.penup()
         raph.forward(100/lenBranch)

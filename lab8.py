@@ -48,10 +48,6 @@ def translate(dna):
             prot = prot + gencode.get(codon)
     return prot
 
-dna = "GATGGAACTTGACTACGTAAATT"
-
-print translate(dna)
-
 def bpCounts(dna): ## works as is for DNA, RNA, or PROTEIN
     bpCounts = {}
     for bp in dna:
@@ -61,9 +57,19 @@ def bpCounts(dna): ## works as is for DNA, RNA, or PROTEIN
             bpCounts[bp] = 1
     return bpCounts
 
-print bpCounts(dna)
+if __name__ == '__main__':
+    dna = "GATGGAACTTGACTACGTAAATT"
 
-prot = "IMTN"
+    print "translate",translate(dna)
+    
+    print "counts",bpCounts(dna)
+
+    prot = "IMTNTHRVGSSL_WEAGFYLCSGGGQ_"
+    print "protCount",bpCounts(prot)
+
+    rna = "GAUUACAUCGAGCUCA"
+    print "rnaCount",bpCounts(rna)
+
 
 ##def translateMany(data,dataType):
 ##    gencode = {'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M', 'ACA':'T',

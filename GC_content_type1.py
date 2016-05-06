@@ -1,6 +1,5 @@
 prob = open("C:/Users/Kaiya/Desktop/scratch_rosalind_2.txt","r")
 
-
 ## fasta get names
 def namesFasta(filename):
     """Gets the names from a fasta file"""
@@ -76,7 +75,7 @@ data = dataFasta(prob)
 
 maxGC = getMaxGC(name,data)
 print maxGC[0]
-print maxGC[1]
+print maxGC[1]*100
 
 prob.close()
 
