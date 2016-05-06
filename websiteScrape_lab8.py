@@ -16,7 +16,7 @@ for i in range(len(weblines)):
         countTalk += 1
         #print weblines[i:i+3]
         dateStr = date.group()
-        print dateStr
+        #print dateStr
         newDate = re.sub("\-16"," 2016",dateStr)
         newDate = re.sub("\-"," ",newDate)
         print newDate
@@ -24,13 +24,17 @@ for i in range(len(weblines)):
         #print weblines[i+2]
         aff = weblines[i+2].find('''top">''')
         name = weblines[i+2][aff+5:].strip()
-        print name,
+        print name
         if name.find("American Museum") != -1:
             amnhTalk += 1
 
         title = weblines[i+4].find('''top">''')
         talk = weblines[i+4][title+5:].strip()
+        talk = re.sub("(<em>|</em>)","",talk)
+        talk = re.sub("&quot;",'''"''',talk)
         print talk
         #title = re.search(,weblines[i+2])
+        print
 
-        print countTalk, amnhTalk
+print "Talks:",countTalk
+print "Amnh-Talks:", amnhTalk
